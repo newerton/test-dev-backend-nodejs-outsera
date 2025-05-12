@@ -57,3 +57,7 @@ npm test
 ## Observações
 - O banco de dados é em memória (SQLite), não requer instalação externa.
 - Os dados são carregados do arquivo `movielist.csv` ao iniciar a aplicação.
+
+## Versões
+- 1.0.0: Versão em Javascript (https://github.com/newerton/test-dev-backend-nodejs-outsera/tree/1.0.0)
+- 2.0.0: Versão em Typescript (https://github.com/newerton/test-dev-backend-nodejs-outsera/tree/2.0.0)
