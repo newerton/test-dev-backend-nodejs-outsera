@@ -1,9 +1,9 @@
 {
   "name": "golden-raspberry-api",
   "version": "1.0.0",
-  "main": "src/start.js",
+  "main": "src/start.ts",
   "scripts": {
-    "start": "node src/start.js",
+    "start": "ts-node src/start.ts",
     "test": "jest"
   },
   "author": "",
@@ -21,6 +21,8 @@
     "@types/supertest": "^6.0.3",
     "jest": "^29.7.0",
     "supertest": "^6.3.4",
+    "ts-jest": "^29.3.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
 }

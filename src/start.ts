@@ -1,7 +1,7 @@
-const { app, Movie, parseCSV } = require('./server');
-const path = require('path');
+import path from 'node:path';
+import { app, Movie, parseCSV } from './server';
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
 
 async function init() {
   await Movie.createTable();

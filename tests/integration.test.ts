@@ -1,14 +1,14 @@
-const request = require('supertest');
-const path = require('path');
-const { app, Movie, parseCSV } = require('../src/server');
-
-beforeAll(async () => {
-  await Movie.createTable();
-  const movies = parseCSV(path.join(__dirname, '../src/utils/csv/movielist.csv'));
-  await Movie.insertMany(movies);
-});
+import request from 'supertest';
+import path from 'node:path';
+import { app, Movie, parseCSV } from '../src/server';
 
 describe('GET /producers/intervals', () => {
+  beforeAll(async () => {
+    await Movie.createTable();
+    const movies = parseCSV(path.join(__dirname, '../src/utils/csv/movielist.csv'));
+    await Movie.insertMany(movies);
+  });
+
   it('should return the correct min and max producer intervals keys', async () => {
     const res = await request(app).get('/producers/intervals');
     expect(res.statusCode).toBe(200);
